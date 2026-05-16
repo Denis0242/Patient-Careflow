@@ -1,4 +1,4 @@
-patient_id,event,journey_date,funnel_stage,funnel_stage_order,age_group,condition,visit_type,region,device_type,acquisition_channel,insurance_type,patient_risk_category,d1_retained,d7_retained,d30_retained,treatment_completed,follow_up_completed,outcome_success,engagement_score,treatment_cost
+Patient ID,Event,Journey Date,Funnel Stage,Funnel Stage Order,Age Group,Condition,Visit Type,Region,Device Type,Acquisition Channel,Insurance Type,Patient Risk Category,D1 Retained,D7 Retained,D30 Retained,Treatment Completed,Follow-up Completed,Outcome Success,Engagement Score,Treatment Cost
 10000,portal_open,2025-04-23,Portal Open,1,60+,Hypertension,Telehealth,West,Mobile,Email Campaign,Medicaid,Medium,0,1,1,1,1,1,8,0.0
 10000,appointment_view,2025-04-24,Appointment View,2,60+,Hypertension,Telehealth,West,Mobile,Email Campaign,Medicaid,Medium,0,1,1,1,1,1,8,0.0
 10000,appointment_booked,2025-04-29,Appointment Booked,3,60+,Hypertension,Telehealth,West,Mobile,Email Campaign,Medicaid,Medium,0,1,1,1,1,1,8,0.0

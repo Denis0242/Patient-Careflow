@@ -24,6 +24,11 @@ This project answers:
 - Which retention window has the biggest decline?
 - Which conditions and visit types show stronger outcome success?
 - How should leadership prioritize follow-up and completion support?
+  
+---
+# Decision Support Use Case
+
+This dashboard helps healthcare teams monitor patient progression across the care journey, identify treatment bottlenecks, evaluate operational performance, and support decisions aimed at improving patient flow, care coordination, and treatment outcomes.
 
 ---
 

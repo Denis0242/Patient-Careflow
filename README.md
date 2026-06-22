@@ -1,124 +1,169 @@
 # Patient CareFlow & Outcomes Dashboard
 
-## Executive Summary
+![Dashboard Preview](screenshots/dashboard_preview.png)
 
-This project analyzes patient journey completion, retention, treatment success, and cost patterns to help healthcare product and operations teams improve care-flow outcomes.
+# Executive Summary
 
-The dashboard evaluates patient funnel progression, D1/D7/D30 retention, completion rate, outcome success rate, visit type performance, condition-level outcomes, and cost exposure to identify where patients drop off and which groups need follow-up support.
+This project analyzes patient journey progression, retention performance, treatment completion, outcome success, and care-cost exposure to help healthcare operations teams improve patient engagement and care outcomes.
 
-Insights from this analysis support decisions around follow-up interventions, telehealth/hybrid care optimization, patient acquisition quality, and care-completion improvement.
+Using Tableau, SQL, Python, and Streamlit, the analysis evaluates patient funnel progression, D1/D7/D30 retention, completion rates, outcome success rates, visit type performance, condition-level outcomes, and treatment costs to identify where patients disengage and where operational improvements should be prioritized.
 
-Expected business impact includes improving treatment completion, increasing long-term retention, reducing avoidable drop-off, and focusing operational support on higher-risk patients.
+The dashboard supports healthcare decision-making by helping stakeholders:
 
-Built using **Tableau, SQL, Python, and Streamlit**.
+* Identify patient drop-off across the care journey
+* Monitor retention and treatment completion performance
+* Evaluate outcome success across conditions and visit types
+* Prioritize follow-up interventions for at-risk patients
+* Improve operational efficiency and patient outcomes
+
+Expected business value includes:
+
+* Improved treatment completion
+* Increased long-term retention
+* Reduced avoidable patient drop-off
+* Improved outcome success rates
+* Better prioritization of operational resources
+
+Built using Tableau, SQL, Python, and Streamlit for healthcare analytics, KPI reporting, and decision-support analytics.
 
 ---
 
-## Business Problem
+# Business Problem
 
-Healthcare teams need a clear way to understand where patients lose engagement across the care journey and how retention, cost, and outcome success vary across patient segments.
+Healthcare organizations need visibility into how patients progress through the care journey and where disengagement occurs.
 
-This project answers:
+Without effective monitoring, healthcare teams may struggle to:
 
-- Where are patients dropping off in the care journey?
-- Which retention window has the biggest decline?
-- Which conditions and visit types show stronger outcome success?
-- How should leadership prioritize follow-up and completion support?
-  
+* Identify patient drop-off points
+* Improve treatment completion rates
+* Monitor retention performance
+* Evaluate outcome success across patient groups
+* Prioritize follow-up interventions
+* Optimize care delivery resources
+
+This project helps healthcare leaders understand patient engagement patterns and identify opportunities to improve care continuity and treatment outcomes.
+
 ---
+
 # Decision Support Use Case
 
-This dashboard helps healthcare teams monitor patient progression across the care journey, identify treatment bottlenecks, evaluate operational performance, and support decisions aimed at improving patient flow, care coordination, and treatment outcomes.
+This dashboard helps healthcare operations teams, care coordinators, clinical leaders, and decision-support analysts monitor patient progression across the care journey, identify treatment bottlenecks, evaluate operational performance, and support decisions aimed at improving patient flow, care coordination, retention, and treatment outcomes.
 
 ---
 
-## KPI Goals
+# KPIs
 
-| KPI | Value | Business Purpose |
-|---|---:|---|
-| Total Patients | 900 | Measures patient population analyzed |
-| D1 Retention | 63.33% | Measures immediate patient engagement |
-| D7 Retention | 40.11% | Measures short-term care continuity |
-| D30 Retention | 23.44% | Measures long-term patient retention |
-| Completion Rate | 27.00% | Measures treatment journey completion |
-| Outcome Success Rate | 25.11% | Measures successful patient outcome rate |
-| Avg Cost per Patient | $77.28 | Measures care-cost exposure per patient |
-
----
-
-## Dataset Overview
-
-| Item | Detail |
-|---|---|
-| Dataset | `careflow_dataset.csv` |
-| Rows | 2,619 |
-| Columns | 21 |
-| Date Range | 2025-01-01 to 2025-05-12 |
-| Grain | Patient journey event level |
-| Key Fields | Patient ID, Event, Funnel Stage, Journey Date, Condition, Visit Type, Region, Retention Flags, Outcome Success, Treatment Cost |
+| KPI                  |  Value | Business Purpose                      |
+| -------------------- | -----: | ------------------------------------- |
+| Total Patients       |    900 | Measures patient population analyzed  |
+| D1 Retention         | 63.33% | Measures immediate patient engagement |
+| D7 Retention         | 40.11% | Measures short-term care continuity   |
+| D30 Retention        | 23.44% | Measures long-term patient retention  |
+| Completion Rate      | 27.00% | Measures treatment journey completion |
+| Outcome Success Rate | 25.11% | Measures successful patient outcomes  |
+| Avg Cost per Patient | $77.28 | Measures care-cost exposure           |
 
 ---
 
-## Dashboard Preview
+# Dashboard Overview
 
-### Main Dashboard
+The dashboard provides a comprehensive view of patient progression, treatment completion, retention performance, outcome success, and care-cost exposure.
+
+Core reporting areas include:
+
+* Patient Journey Funnel Analysis
+* D1, D7, and D30 Retention Monitoring
+* Treatment Completion Tracking
+* Outcome Success Analysis
+* Condition Performance Evaluation
+* Visit Type Performance Analysis
+* Cost Exposure Monitoring
+
+The dashboard supports healthcare operations teams by providing visibility into patient engagement and treatment outcomes.
+
+---
+
+# Dashboard Screenshots
+
+## Main Dashboard
 
 ![Patient CareFlow Dashboard](screenshots/dashboard_preview.png)
 
-### KPI Overview
+## KPI Overview
 
 ![KPI Overview](screenshots/kpi_overview.png)
 
-### Journey Funnel
+## Journey Funnel
 
 ![Journey Funnel](screenshots/journey_funnel.png)
 
-### Retention Cohort
+## Retention Cohort
 
 ![Retention Cohort](screenshots/retention_cohort.png)
 
 ---
 
-## Product Insights
+# Key Insight
 
-### Insight
-
-Patient drop-off is highest between consultation and D30 retention, showing that long-term care continuity is the biggest challenge after the initial treatment journey begins.
-
-### Action
-
-Monitor high-risk patients, low-retention cohorts, and journey stages with the largest conversion loss so care teams can intervene before disengagement increases.
-
-### Recommendation
-
-Implement targeted follow-up interventions such as reminders, telehealth support, care-navigation messages, and prioritization workflows for high-risk patients.
-
-### Decision
-
-Prioritize improving treatment completion and D30 retention before scaling patient acquisition efforts.
+The largest patient drop-off occurs after the initial consultation phase, with D30 retention declining to 23.44%, indicating that long-term care continuity represents the greatest opportunity for operational improvement and patient engagement intervention.
 
 ---
 
-## SQL Transformations
+# Business Impact
 
-The repo includes 4 representative SQL queries in [`sql/careflow_analysis.sql`](sql/careflow_analysis.sql):
+This dashboard can help healthcare organizations:
 
-1. KPI summary
-2. Funnel drop-off analysis
-3. Retention by cohort
-4. Outcome success by condition and visit type
+* Improve treatment completion by an estimated 5–8%
+* Increase D30 retention by 3–6 percentage points
+* Reduce avoidable patient drop-off by 10–15%
+* Improve telehealth utilization efficiency
+* Enable earlier intervention for high-risk patient cohorts
+* Support KPI-driven healthcare decision-making
 
-### Representative SQL Queries
+---
 
-#### Patient Retention KPI
+# Recommendation
+
+Implement targeted follow-up programs, telehealth engagement strategies, and care-navigation interventions focused on patients at risk of disengagement in order to improve treatment completion, long-term retention, and overall outcome success.
+
+---
+
+# Data Dictionary
+
+| Field           | Description                         |
+| --------------- | ----------------------------------- |
+| patient_id      | Unique patient identifier           |
+| funnel_stage    | Patient journey stage               |
+| journey_date    | Patient event date                  |
+| condition       | Clinical condition category         |
+| visit_type      | In-person, virtual, or hybrid visit |
+| region          | Geographic region                   |
+| d1_retained     | Day 1 retention indicator           |
+| d7_retained     | Day 7 retention indicator           |
+| d30_retained    | Day 30 retention indicator          |
+| outcome_success | Successful treatment outcome flag   |
+| treatment_cost  | Cost associated with treatment      |
+
+---
+
+# SQL Queries
+
+The repository includes representative SQL queries for:
+
+* KPI Summary
+* Funnel Drop-Off Analysis
+* Retention Analysis
+* Outcome Success Analysis
+
+### Patient Retention KPI
 
 ```sql
 SELECT
-    ROUND(AVG(d30_retained)*100,2) AS d30_retention_rate
+    ROUND(AVG(d30_retained) * 100, 2) AS d30_retention_rate
 FROM careflow_clean;
 ```
 
-#### Funnel Drop-off
+### Funnel Drop-Off Analysis
 
 ```sql
 SELECT
@@ -131,22 +176,38 @@ ORDER BY patients DESC;
 
 ---
 
-## Metrics Engineering
+# Metrics Engineering
 
 ```text
 D1 Retention Rate = D1 Retained Patients / Total Patients
+
 D7 Retention Rate = D7 Retained Patients / Total Patients
+
 D30 Retention Rate = D30 Retained Patients / Total Patients
-Completion Rate = Treatment Completed Patients / Total Patients
-Outcome Success Rate = Successful Outcome Patients / Total Patients
-Avg Cost per Patient = Total Treatment Cost / Total Patients
-Stage Drop-off = Previous Stage Patients - Current Stage Patients
+
+Completion Rate = Completed Patients / Total Patients
+
+Outcome Success Rate = Successful Outcomes / Total Patients
+
+Average Cost per Patient = Total Treatment Cost / Total Patients
+
+Stage Drop-Off = Previous Stage Patients - Current Stage Patients
+
 Stage Conversion Rate = Current Stage Patients / Previous Stage Patients
 ```
 
+This project emphasizes:
+
+* Patient journey analytics
+* Retention monitoring
+* Treatment completion analysis
+* Outcome measurement
+* Cost exposure monitoring
+* Healthcare operations reporting
+
 ---
 
-## Analytics Workflow
+# Analytics Workflow
 
 ```text
 Business Problem
@@ -159,9 +220,9 @@ SQL Transformations
         ↓
 Metrics Engineering
         ↓
-Dashboard Build
+Dashboard Development
         ↓
-Insights
+Business Insights
         ↓
 Decision Support
         ↓
@@ -170,85 +231,79 @@ Business Impact
 
 ---
 
-## Streamlit App
+# Executive Decision Summary
 
-Interactive healthcare analytics application including:
+### Insight
 
-- KPI monitoring
-- Funnel drop-off analysis
-- D1/D7/D30 retention tracking
-- Patient segmentation
-- Cost & outcome monitoring
-- Executive decision framework
+Long-term patient retention declines significantly after the initial consultation phase, creating operational challenges for treatment completion and outcome success.
 
-Launch locally:
+### Action
 
-```bash
-pip install -r requirements.txt
-streamlit run app/streamlit_app.py
-```
+Monitor D30 retention, treatment completion, and high-risk patient cohorts while strengthening patient follow-up efforts.
 
-The Streamlit app recreates the dashboard story with KPI cards, funnel analysis, retention visuals, cost/outcome analysis, condition performance, visit type outcomes, and an executive decision summary.
+### Recommendation
+
+Expand telehealth support, automated reminders, and care-navigation interventions to improve long-term patient engagement.
+
+### Decision
+
+Prioritize treatment completion and D30 retention improvement before increasing patient acquisition efforts.
 
 ---
 
-## Business Impact
+# Tools Used
 
-This dashboard can help healthcare and product teams to:
-
-- Improve treatment completion by **5–8%**
-- Increase D30 retention by **3–6 percentage points**
-- Reduce avoidable patient drop-off by **10–15%**
-- Improve telehealth utilization efficiency
-- Enable earlier intervention for high-risk cohorts
+* SQL
+* Tableau
+* Python
+* Pandas
+* Streamlit
+* GitHub
 
 ---
 
-## Experimentation Thinking
-
-Potential A/B tests:
-
-- Reminder frequency optimization
-- Telehealth vs in-person follow-up
-- Personalized care navigation messaging
-- High-risk patient intervention timing
----
-
-## Repo Architecture
+# Repository Structure
 
 ```text
 Patient-CareFlow-Outcomes-Dashboard/
 ├── app/
-│   └── streamlit_app.py
 ├── dashboard/
-│   └── README.md
 ├── data/
-│   ├── careflow_dataset.csv
-│   ├── careflow_clean.csv
-│   └── raw_careflow_dataset.csv
 ├── docs/
-│   ├── data_dictionary.md
-│   └── executive_summary.md
 ├── notebooks/
-│   └── eda_cleaning_feature_engineering.ipynb
 ├── screenshots/
-│   ├── dashboard_preview.png
-│   ├── kpi_overview.png
-│   ├── journey_funnel.png
-│   ├── retention_cohort.png
-│   └── executive_decision_summary.png
 ├── sql/
-│   └── careflow_analysis.sql
-├── .gitignore
 ├── README.md
 └── requirements.txt
 ```
 
 ---
 
-## Future Improvements
+# How to Run the Project
 
-- Add predictive modeling for patients at risk of non-completion.
-- Add A/B testing for follow-up interventions.
-- Connect the dashboard to a live warehouse such as Snowflake or Redshift.
-- Add scheduled data refresh using Python, Prefect, or scheduled SQL jobs.
+```bash
+git clone https://github.com/Denis0242/Patient-Careflow
+
+pip install -r requirements.txt
+
+streamlit run app/streamlit_app.py
+```
+
+---
+
+# Future Improvements
+
+* Add predictive modeling for patients at risk of non-completion
+* Add A/B testing for follow-up interventions
+* Connect to Snowflake or Redshift
+* Add automated refresh workflows
+* Add cohort-based retention analysis
+
+---
+
+# Disclaimer
+
+* Dataset is synthetic and created for portfolio purposes.
+* No real patient information is included.
+* Project developed for educational and demonstration purposes.
+* Healthcare metrics and business impact estimates are illustrative and intended to demonstrate analytical decision-making.

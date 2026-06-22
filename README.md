@@ -6,7 +6,7 @@
 
 This project analyzes patient journey progression, retention performance, treatment completion, outcome success, and care-cost exposure to help healthcare operations teams improve patient engagement and care outcomes.
 
-Using Tableau, SQL, Python, and Streamlit, the analysis evaluates patient funnel progression, D1/D7/D30 retention, completion rates, outcome success rates, visit type performance, condition-level outcomes, and treatment costs to identify where patients disengage and where operational improvements should be prioritized.
+Using Tableau, SQL, Python, and Streamlit, the analysis evaluates patient funnel progression, D1, D7, and D30 retention, completion rates, outcome success rates, visit type performance, condition-level outcomes, and treatment costs to identify where patients disengage and where operational improvements should be prioritized.
 
 The dashboard supports healthcare decision-making by helping stakeholders:
 
@@ -146,9 +146,37 @@ Implement targeted follow-up programs, telehealth engagement strategies, and car
 
 ---
 
+# EDA + Feature Engineering
+
+The project includes exploratory data analysis, data validation, and feature engineering designed to improve patient journey analysis and retention monitoring.
+
+### Key Activities
+
+* Missing value validation
+* Duplicate record checks
+* Funnel-stage validation
+* Patient journey sequencing
+* Retention calculations
+* Treatment completion analysis
+* Cost analysis
+* Outcome monitoring
+
+### Engineered Features
+
+* funnel_stage_order
+* completion_flag
+* retention_band
+* cost_band
+* outcome_success_flag
+* patient_risk_category
+
+These engineered features support patient journey monitoring, retention analysis, and operational decision-making.
+
+---
+
 # SQL Queries
 
-The repository includes representative SQL queries for:
+The repository includes representative SQL queries supporting:
 
 * KPI Summary
 * Funnel Drop-Off Analysis
@@ -258,6 +286,7 @@ Prioritize treatment completion and D30 retention improvement before increasing 
 * Python
 * Pandas
 * Streamlit
+* Excel
 * GitHub
 
 ---
